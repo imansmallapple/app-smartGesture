@@ -1,0 +1,13 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/touchGestures/gesture1",
+    "pages/touchGestures/gesture2",
+    "pages/touchGestures/gesture3",
+    "pages/touchGestures/gesture4",
+    "pages/touchGestures/gesture5",
+    "pages/touchGestures/gesture6",
+    "pages/touchGestures/gesture7",
+    "pages/touchGestures/gesture8"
+  ]
+}
