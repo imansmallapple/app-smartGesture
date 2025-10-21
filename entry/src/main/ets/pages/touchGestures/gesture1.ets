@@ -35,13 +35,16 @@ struct TouchPage {
       Column() {
 
         Toggle({ type: ToggleType.Switch, isOn: this.isOn })
-          .onTouch(()=>{
-            this.isOn != this.isOn
+          .onTouch(() => {
+            this.isOn = !this.isOn
           })
+          .borderWidth(1)
+          .borderRadius(20)
+          .borderColor(Color.White)
 
 
-
-
+        Image(this.isOn ? $r('app.media.blub_on') : $r('app.media.bulb_off'))
+          .width(50)
 
       }
       .layoutWeight(1)
@@ -51,7 +54,7 @@ struct TouchPage {
         image: this.image
       })
     }
-    .backgroundColor(Color.Black)
+    .backgroundColor('#e84699cf')
     .height('100%')
     .width('100%')
     .borderRadius('50%')

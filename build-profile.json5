@@ -7,11 +7,11 @@
         "material": {
           "certpath": "C:\\Users\\chens\\.ohos\\config\\default_smartGestureDemo_TK1dRneUQ3u3irwQpmJGl5cIeHy_NSYhDyrQd6xcfGA=.cer",
           "keyAlias": "debugKey",
-          "keyPassword": "000000199804C37CA3CD91A7D0C9F8DACD0CD58E1AF493FCAE4FF3C3D33B4BB2C3D9568C83DD796C16",
+          "keyPassword": "00000019C89F9FFDE89D9EDA0FB27038C7A5FD4F32D487843B395BF6C19007B4C3F2AEE0CBADD396A5",
           "profile": "C:\\Users\\chens\\.ohos\\config\\default_smartGestureDemo_TK1dRneUQ3u3irwQpmJGl5cIeHy_NSYhDyrQd6xcfGA=.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\chens\\.ohos\\config\\default_smartGestureDemo_TK1dRneUQ3u3irwQpmJGl5cIeHy_NSYhDyrQd6xcfGA=.p12",
-          "storePassword": "0000001974DDC055E38B1F3D9FBB3D5EF7519450BD96D3F613EC1C48BC49C9AB3CFAEA19DBD088624B"
+          "storePassword": "0000001948FF860CBB4B0321A4523060F38C2D03E549F5103295B2F3997445A2C1E298C282B3D92B9C"
         }
       }
     ],

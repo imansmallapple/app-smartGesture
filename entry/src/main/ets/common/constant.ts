@@ -15,27 +15,27 @@ export default class Constant {
     {
       title: "Touch",
       description: "Touch an element to activate the component or function",
-      task: "Touch the toggle to control the bulb",
+      task: "Touch the toggle to turn on the bulb",
       image: 'app.media.touch'
     },
     {
       title: "Press and hold",
       description: "Press and hold an element to display additional controls or functions",
-      task: "Task",
+      task: "Press and hold to turn on the bulb",
       image: 'app.media.presshold'
     },
 
     {
       title: "Drag and drop",
       description: "Drag an element to move it",
-      task: "Task",
+      task: "Drag the thunder to charge the bulb",
       image: 'app.media.dragdrop'
     },
 
     {
       title: "Swipe",
       description: "Scroll the content vertically or swipe the screen horizontally",
-      task: "Task",
+      task: "Swipe the list to charge the bulb with thunder",
       image: 'app.media.swipe'
     },
 
@@ -64,4 +64,16 @@ export default class Constant {
       image: 'app.media.tap'
     },
   ]
+
+  static fruitList: string[] = [
+    'app.media.apple',
+    'app.media.blueberry',
+    'app.media.orange',
+    'app.media.passion_fruit',
+    'app.media.pineapple',
+    'app.media.thunder',
+    'app.media.strawberry',
+    'app.media.watermelon',
+  ]
+
 }

@@ -19,8 +19,8 @@ function buildText() {
 @Component
 struct Index {
   private touchGestureList: Touch[] = Constant.gestureList
-  private watchSize: string = '466px'; // Wearable默认宽高：466*466
-  private listSize: string = '414px'; // item宽度
+  private watchSize: string = '466px'
+  private listSize: string = '414px'
   @State isTouchGesture: boolean = true
   context: UIContext = this.getUIContext();
   tabBar1: ComponentContent<Object> = new ComponentContent(this.context, wrapBuilder(buildText));
