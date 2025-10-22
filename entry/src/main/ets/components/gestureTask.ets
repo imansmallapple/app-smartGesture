@@ -20,7 +20,7 @@ export struct gestureTaskComponent {
             .fontSize('18px')
             .fontWeight(FontWeight.Bold)
             .fontColor(Color.Black)
-            .margin({ right: 30 })
+            .margin({ right: 35 })
         }
         .width('50%')
         .height('100%')

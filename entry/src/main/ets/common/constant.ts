@@ -1,17 +1,52 @@
-import Touch from "../models/model"
+import Gesture from "../models/model"
 
 export default class Constant {
-  static crownAbilityList: string[] = [
-    'Press',
-    'Press and hold',
-    'Press Launcher',
-    'Press and hold for 3s',
-    'Double press',
-    'Turn counterclockwise',
-    'Turn clockwise',
+  static crownAbilityList: Gesture[] = [
+    {
+      title: "Press",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Press and hold",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Press launcher",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Press and hold 3s",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Double press",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Turn counterclockwise",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Turn clockwise",
+      description: "Text",
+      task: "Task",
+      image: 'app.media.touch'
+    },
   ]
 
-  static gestureList: Touch[] = [
+  static gestureList: Gesture[] = [
     {
       title: "Touch",
       description: "Touch an element to activate the component or function",
@@ -42,25 +77,25 @@ export default class Constant {
     {
       title: "Double-tap",
       description: "Double-tap to zoom in or zoom out on the content",
-      task: "Task",
+      task: "Double tap to enlarge the thunder",
       image: 'app.media.double_tap'
     },
     {
       title: "Pinch",
       description: "Pinch to zoom in or zoom out on the content",
-      task: "Task",
+      task: "Pinch to enlarge the thunder",
       image: 'app.media.pinch'
     },
     {
       title: "Rotate",
       description: "Rotate the selected content",
-      task: "Task",
+      task: "Rotate the arrow to proper angle",
       image: 'app.media.rotate'
     },
     {
       title: "Tap",
-      description: "Tap the screen with a single knuckle to take a screenshot",
-      task: "Task",
+      description: "Tap the screen with a single knuckle to trigger an action",
+      task: "Tap the cloud to give thunder",
       image: 'app.media.tap'
     },
   ]

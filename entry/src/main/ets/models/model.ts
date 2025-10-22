@@ -1,4 +1,4 @@
-class Touch {
+class Gesture {
   title: string
   description: string
   task: string
@@ -12,4 +12,4 @@ class Touch {
   }
 }
 
-export default Touch
+export default Gesture

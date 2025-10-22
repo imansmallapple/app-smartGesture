@@ -8,6 +8,16 @@
     "pages/touchGestures/gesture5",
     "pages/touchGestures/gesture6",
     "pages/touchGestures/gesture7",
-    "pages/touchGestures/gesture8"
+    "pages/touchGestures/gesture8",
+    "pages/screen",
+    "pages/crownGestures/gesture1",
+    "pages/crownGestures/gesture2",
+    "pages/crownGestures/gesture3",
+    "pages/crownGestures/gesture4",
+    "pages/crownGestures/gesture5",
+    "pages/crownGestures/gesture6",
+    "pages/crownGestures/gesture7",
+    "pages/crownGestures/gesture8",
+    "pages/crown"
   ]
 }
