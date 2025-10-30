@@ -10,7 +10,8 @@ struct Tap {
   @State angle: number = 0
   @State rotateValue: number = 0
 
-  triggerBulb() {
+  onBackPress(): boolean | void {
+    return true
   }
 
   build() {
@@ -23,6 +24,7 @@ struct Tap {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 8
         })
 
@@ -49,6 +51,27 @@ struct Tap {
         .layoutWeight(1)
         .justifyContent(FlexAlign.Center)
 
+        Column() {
+          Text('END')
+            .fontSize('15px')
+            .fontWeight(FontWeight.Bold)
+            .fontColor(Color.White)
+            .margin({ left: 3 })
+        }
+        .width('10%')
+        .height('100%')
+        .justifyContent(FlexAlign.Center)
+        .alignItems(HorizontalAlign.Start)
+        .backgroundColor(Color.Orange)
+        .borderRadius({
+          topLeft: 15,
+          bottomLeft: 15
+        })
+        .onClick(()=>{
+          this.getUIContext().getRouter().replaceUrl({
+            url:'pages/Index'
+          })
+        })
       }
       .width('100%')
       .layoutWeight(1)

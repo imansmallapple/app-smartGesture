@@ -31,7 +31,7 @@ struct ScreenGestureList {
     wrapBuilder(buildScreenGestureTitle));
 
   private pageOf(touchIndex?: number): string {
-      return `pages/touchGestures/gesture${touchIndex}`
+    return `pages/touchGestures/gesture${touchIndex}`
   }
 
   @Builder

@@ -16,6 +16,10 @@ struct Swipe {
   private _currentScrollY: number = 0
   private _maxScrollY: number = 0
 
+  onBackPress(): boolean | void {
+    return true
+  }
+
   triggerBulb() {
     if (this._currentScrollY >= 113 && this._currentScrollY <= 123) {
       this.isOn = true
@@ -34,6 +38,7 @@ struct Swipe {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 4
         })
 
@@ -84,6 +89,7 @@ struct Swipe {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 4
         })
       }

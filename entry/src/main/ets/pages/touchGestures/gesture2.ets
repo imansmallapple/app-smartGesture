@@ -11,6 +11,10 @@ struct PressHold {
   @State progressValue: number = 0
   @State animationId: number | null = null
 
+  onBackPress(): boolean | void {
+    return true
+  }
+
   build() {
     Column() {
       gestureInfoComponent({
@@ -21,6 +25,7 @@ struct PressHold {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 2
         })
 
@@ -58,6 +63,7 @@ struct PressHold {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 2
         })
       }

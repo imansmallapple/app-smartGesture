@@ -10,6 +10,10 @@ struct Rotate {
   @State angle: number = 0
   @State rotateValue: number = 0
 
+  onBackPress(): boolean | void {
+    return true
+  }
+
   triggerBulb() {
     let n: number = Math.floor(this.angle / 360)
 
@@ -30,6 +34,7 @@ struct Rotate {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 7
         })
 
@@ -54,6 +59,7 @@ struct Rotate {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 7
         })
       }

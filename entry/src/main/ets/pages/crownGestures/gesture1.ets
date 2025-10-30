@@ -5,31 +5,31 @@ import Constant from '../../common/constant'
 
 @Entry
 @Component
-struct TouchPage {
-  @State isOn: boolean = false
+struct Press {
+
+  onBackPress(): boolean | void {
+    return true
+  }
 
   build() {
     Column() {
       gestureInfoComponent({
-        title: Constant.gestureList[0].title,
-        description: Constant.gestureList[0].description
+        title: Constant.crownAbilityList[0].title,
+        description: Constant.crownAbilityList[0].description
       })
 
       Row() {
-        Row({ space: 20 }) {
+        Row() {
 
-          // Toggle({ type: ToggleType.Switch, isOn: this.isOn })
-          Image($r('app.media.finger_print'))
-            .onTouch(() => {
-              this.isOn = true
+          List({ space: 4 }) {
+            ForEach(Constant.pressAbility, (item: string) => {
+              ListItem() {
+                Text(item)
+                  .fontSize(10)
+                  .fontWeight(FontWeight.Bold)
+              }
             })
-            .borderRadius(20)
-            .width(40)
-
-
-          Image(this.isOn ? $r('app.media.blub_on') : $r('app.media.bulb_off'))
-            .width(50)
-
+          }
         }
         .layoutWeight(1)
         .justifyContent(FlexAlign.Center)
@@ -37,16 +37,21 @@ struct TouchPage {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: true,
           currentTouchId: 1,
         })
       }
       .width('100%')
       .layoutWeight(1)
 
-      gestureTaskComponent({
-        task: Constant.gestureList[0].task,
-        image: Constant.gestureList[0].image
-      })
+      Column() {
+        Image($r('app.media.app_gallery'))
+          .width(55)
+      }
+      .width('100%')
+      .height('25%')
+      .backgroundColor(Color.White)
+      .justifyContent(FlexAlign.Center)
     }
     .backgroundColor('#e84699cf')
     .height('100%')

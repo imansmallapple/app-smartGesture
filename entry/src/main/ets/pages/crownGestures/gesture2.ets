@@ -7,67 +7,62 @@ import Touch from '../../models/model'
 @Entry
 @Component
 struct PressHold {
-  @State isOn: boolean = false
-  @State progressValue: number = 0
-  @State animationId: number | null = null
+
+  onBackPress(): boolean | void {
+    return true
+  }
 
   build() {
     Column() {
       gestureInfoComponent({
-        title: Constant.gestureList[1].title,
-        description: Constant.gestureList[1].description
+        title: Constant.crownAbilityList[1].title,
+        description: Constant.crownAbilityList[1].description
       })
 
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: true,
           currentTouchId: 2
         })
 
-        Column() {
+        Row() {
+          Row() {
 
-          Progress({ value: this.progressValue, total: 100, type: ProgressType.Ring })
-            .color(Color.Orange)
-            .width(30)
-            .style({ strokeWidth: 5, enableSmoothEffect: true })
-            .backgroundColor('#2c070000')
-
-          Image(this.isOn ? $r('app.media.blub_on') : $r('app.media.bulb_off'))
-            .width(50)
-        }
-        .layoutWeight(1)
-        .gesture(
-          LongPressGesture({ repeat: true, duration: 10 })
-            .onAction((event: GestureEvent | undefined) => {
-              if (event && this.progressValue <= 100) {
-                clearInterval(this.animationId)
-                this.animationId = null
-                this.progressValue++
-                if (this.progressValue == 100) {
-                  this.isOn = true
+            List({ space: 4 }) {
+              ForEach(Constant.pressHoldAbility, (item: string) => {
+                ListItem() {
+                  Text(item)
+                    .fontSize(10)
+                    .fontWeight(FontWeight.Bold)
                 }
-              }
-            })
-            .onActionEnd(() => {
-              if (this.progressValue <= 101) {
-                this.progressValue = 0
-                this.isOn = false
-              }
-            })
-        )
+              })
+            }
+          }
+          .layoutWeight(1)
+          .justifyContent(FlexAlign.Center)
+          .margin({ left: 20 })
+        }
+        .width('100%')
+        .layoutWeight(1)
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: true,
           currentTouchId: 2
         })
       }
       .width('100%')
       .layoutWeight(1)
 
-      gestureTaskComponent({
-        task: Constant.gestureList[1].task,
-        image: Constant.gestureList[1].image
-      })
+      Column() {
+        Image($r('app.media.shutdown'))
+          .width(55)
+      }
+      .width('100%')
+      .height('25%')
+      .backgroundColor(Color.White)
+      .justifyContent(FlexAlign.Center)
     }
 
     .backgroundColor('#e84699cf')

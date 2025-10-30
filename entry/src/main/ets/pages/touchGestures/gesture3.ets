@@ -12,6 +12,10 @@ struct DragDrop {
   @State positionX: number = 0;
   @State positionY: number = 0;
 
+  onBackPress(): boolean | void {
+    return true
+  }
+
   triggerBulb() {
     if (this.offsetX >= 67 && this.offsetX <= 93 && this.offsetY >= -40 && this.offsetY <= 40) {
       this.isOn = true
@@ -30,6 +34,7 @@ struct DragDrop {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 3
         })
 
@@ -63,6 +68,7 @@ struct DragDrop {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 3
         })
       }

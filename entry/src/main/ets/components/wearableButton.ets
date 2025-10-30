@@ -3,6 +3,7 @@ export struct buttonComponent {
   private lastUrl: string = '<'
   private nextUrl: string = '>'
   @Prop isNext: boolean
+  @Prop isCrownGesture: boolean
   @Prop currentTouchId: number
 
   build() {
@@ -14,15 +15,29 @@ export struct buttonComponent {
         .margin(this.isNext ? { left: 2 } : { right: 2 })
     }
     .onClick(() => {
-      this.isNext ?
-      this.getUIContext().getRouter().replaceUrl({
-        url: `pages/touchGestures/gesture${this.currentTouchId + 1}`
-      })
-        :
-      this.getUIContext().getRouter().replaceUrl({
-        url: `pages/touchGestures/gesture${this.currentTouchId - 1}`
-      })
+      this.isCrownGesture ?
+        (
+          this.isNext ?
+          this.getUIContext().getRouter().replaceUrl({
+            url: `pages/crownGestures/gesture${this.currentTouchId + 1}`
+          })
+            :
+          this.getUIContext().getRouter().replaceUrl({
+            url: `pages/crownGestures/gesture${this.currentTouchId - 1}`
+          })
 
+        )
+        :
+        (
+          this.isNext ?
+          this.getUIContext().getRouter().replaceUrl({
+            url: `pages/touchGestures/gesture${this.currentTouchId + 1}`
+          })
+            :
+          this.getUIContext().getRouter().replaceUrl({
+            url: `pages/touchGestures/gesture${this.currentTouchId - 1}`
+          })
+        )
     })
     .width('10%')
     .height('100%')

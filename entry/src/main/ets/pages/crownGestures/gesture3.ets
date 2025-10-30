@@ -5,75 +5,63 @@ import { buttonComponent } from '../../components/wearableButton'
 
 @Entry
 @Component
-struct DragDrop {
-  @State isOn: boolean = false
-  @State offsetX: number = 0;
-  @State offsetY: number = 0;
-  @State positionX: number = 0;
-  @State positionY: number = 0;
+struct DoublePress {
 
-  triggerBulb() {
-    if (this.offsetX >= 67 && this.offsetX <= 93 && this.offsetY >= -40 && this.offsetY <= 40) {
-      this.isOn = true
-    } else {
-      this.isOn = false
-    }
+  onBackPress(): boolean | void {
+    return true
   }
 
   build() {
     Column() {
       gestureInfoComponent({
-        title: Constant.gestureList[2].title,
-        description: Constant.gestureList[2].description
+        title: Constant.crownAbilityList[2].title,
+        description: Constant.crownAbilityList[2].description
       })
 
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: true,
           currentTouchId: 3
         })
 
-        Row({ space: 50 }) {
+        Row() {
+          Row() {
 
-          Image($r('app.media.thunder'))
-            .width(30)
-            .translate({ x: this.offsetX, y: this.offsetY, z: 0 })
-            .gesture(
-              PanGesture()
-                .onActionUpdate((event: GestureEvent | undefined) => {
-                  if (event) {
-                    this.offsetX = this.positionX + event.offsetX;
-                    this.offsetY = this.positionY + event.offsetY;
-                    this.triggerBulb()
-                    console.log('coordinates: ', this.offsetX, this.offsetY)
-                  }
-                })
-                .onActionEnd(() => {
-                  this.positionX = this.offsetX;
-                  this.positionY = this.offsetY;
-                })
-            )
-            .zIndex(1)
-
-          Image(this.isOn ? $r('app.media.blub_on') : $r('app.media.bulb_off'))
-            .width(50)
+            List({ space: 4 }) {
+              ForEach(Constant.doublePressAbility, (item: string) => {
+                ListItem() {
+                  Text(item)
+                    .fontSize(10)
+                    .fontWeight(FontWeight.Bold)
+                }
+              })
+            }
+          }
+          .layoutWeight(1)
+          .justifyContent(FlexAlign.Center)
+          .margin({ left: 20 })
         }
+        .width('100%')
         .layoutWeight(1)
-        .justifyContent(FlexAlign.Center)
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: true,
           currentTouchId: 3
         })
       }
       .width('100%')
       .layoutWeight(1)
 
-
-      gestureTaskComponent({
-        task: Constant.gestureList[2].task,
-        image: Constant.gestureList[2].image
-      })
+      Column() {
+        Image($r('app.media.double_press'))
+          .width(55)
+      }
+      .width('100%')
+      .height('25%')
+      .backgroundColor(Color.White)
+      .justifyContent(FlexAlign.Center)
     }
     .backgroundColor('#e84699cf')
     .height('100%')

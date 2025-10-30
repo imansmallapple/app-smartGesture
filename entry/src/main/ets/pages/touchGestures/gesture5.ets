@@ -8,6 +8,10 @@ import { buttonComponent } from '../../components/wearableButton'
 struct DoubleTap {
   @State isOn: boolean = false
 
+  onBackPress(): boolean | void {
+    return true
+  }
+
   build() {
     Column() {
       gestureInfoComponent({
@@ -18,6 +22,7 @@ struct DoubleTap {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 5
         })
 
@@ -49,6 +54,7 @@ struct DoubleTap {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 5
         })
       }

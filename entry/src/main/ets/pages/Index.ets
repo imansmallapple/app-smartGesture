@@ -1,6 +1,10 @@
 @Entry
 @Component
 struct Index {
+  onBackPress(): boolean | void {
+    return true
+  }
+
   build() {
     Column() {
       Row() {

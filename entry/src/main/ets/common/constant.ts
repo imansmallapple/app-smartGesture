@@ -4,46 +4,46 @@ export default class Constant {
   static crownAbilityList: Gesture[] = [
     {
       title: "Press",
-      description: "Text",
+      description: "Press the crown then release it",
       task: "Task",
       image: 'app.media.touch'
     },
     {
       title: "Press and hold",
-      description: "Text",
-      task: "Task",
-      image: 'app.media.touch'
-    },
-    {
-      title: "Press launcher",
-      description: "Text",
-      task: "Task",
-      image: 'app.media.touch'
-    },
-    {
-      title: "Press and hold 3s",
-      description: "Text",
+      description: "Press the crown and hold it",
       task: "Task",
       image: 'app.media.touch'
     },
     {
       title: "Double press",
-      description: "Text",
+      description: "Double press the crown",
       task: "Task",
       image: 'app.media.touch'
     },
     {
-      title: "Turn counterclockwise",
-      description: "Text",
-      task: "Task",
+      title: "Rotate",
+      description: "Rotate the crown counterclockwise or clockwise",
+      task: "Rotate the crown to charge the bulb",
       image: 'app.media.touch'
     },
-    {
-      title: "Turn clockwise",
-      description: "Text",
-      task: "Task",
-      image: 'app.media.touch'
-    },
+  ]
+
+  static pressAbility: string[] = [
+    '1. Screen off           → press to wake up',
+    '2. On main screen → press to open app gallery',
+    '3. In other screen  → press to return main screen',
+    '4. Incoming call     → press to mute the call',
+  ]
+
+  static pressHoldAbility: string[] = [
+    '1. Screen off → Hold to power on',
+    '2. Screen on → Hold to restart/shutdown menu',
+    '3. Screen on → Hold >12s to force restart'
+  ]
+
+  static doublePressAbility: string[] = [
+    '1. Screen on            → Double press to show running apps',
+    '2. While exercising → Double press to open background tasks'
   ]
 
   static gestureList: Gesture[] = [
@@ -110,5 +110,4 @@ export default class Constant {
     'app.media.strawberry',
     'app.media.watermelon',
   ]
-
 }

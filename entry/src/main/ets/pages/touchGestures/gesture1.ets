@@ -5,8 +5,12 @@ import Constant from '../../common/constant'
 
 @Entry
 @Component
-struct TouchPage {
+struct Touch {
   @State isOn: boolean = false
+
+  onBackPress(): boolean | void {
+    return true
+  }
 
   build() {
     Column() {
@@ -37,6 +41,7 @@ struct TouchPage {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 1,
         })
       }

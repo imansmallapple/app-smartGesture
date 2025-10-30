@@ -12,6 +12,10 @@ struct DoubleTap {
   @State pinchX: number = 10;
   @State pinchY: number = 10;
 
+  onBackPress(): boolean | void {
+    return true
+  }
+
   triggerBulb() {
     if (this.scaleValue >= 4) {
       this.isOn = true
@@ -30,6 +34,7 @@ struct DoubleTap {
       Row() {
         buttonComponent({
           isNext: false,
+          isCrownGesture: false,
           currentTouchId: 6
         })
 
@@ -72,6 +77,7 @@ struct DoubleTap {
 
         buttonComponent({
           isNext: true,
+          isCrownGesture: false,
           currentTouchId: 6
         })
       }

@@ -12,6 +12,7 @@ export struct gestureInfoComponent {
           .fontSize('25px')
           .fontWeight(FontWeight.Bold)
           .fontColor(Color.Black)
+          .margin({ top: 10 })
       }
       .margin({ top: 10 })
 
