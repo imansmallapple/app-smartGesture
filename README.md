@@ -12,7 +12,7 @@ It helps developers verify the system’s response to different operations such 
 
 The app covers both **touch-based gestures** and **hardware button actions**, offering visual feedback on the watch screen for each interaction.
 
-UI effects is as following:
+UI effects is as following:  
 ![image1.png](images%2Fimage1.png)
 ![image2.png](images%2Fimage2.png)
 ![image3.png](images%2Fimage3.png)
