@@ -58,12 +58,6 @@ git clone https://github.com/eclipse-oniro4openharmony/wearable-smartGesture.git
 
 **2. Build and Deploy**
 * Ensure you are using API level higher than 18 
-* Confirm your app is a `system-level` application
 * Connect the watch using IP connection
 * Sign the application with valid signature configurations
 * Click `run` on DevEco Studio to install the application
-
-> **Note:**
->
-> See this [tutorial](https://docs.oniroproject.org/application-development/codeLabs/) for how to configure the project as a `system-level` application.
-
