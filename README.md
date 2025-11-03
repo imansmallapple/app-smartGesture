@@ -3,7 +3,7 @@
 ## Content table
 1. [Overview](#overview)
 2. [Features](#features)
-3. [Setup Instructions](#setup-instructions)
+3. [Setup Instruction](#setup-instruction)
 
 
 ## Overview
@@ -53,7 +53,7 @@ UI effects is as following:
 ## Setup Instruction
 **1. Clone the repository**
 ```bash
-git clone https://github.com/eclipse-oniro4openharmony/wearable-smartGesture.git
+git clone https://github.com/eclipse-oniro4openharmony/app-smartGesture.git
 ```
 
 **2. Build and Deploy**
