@@ -14,6 +14,9 @@
     "pages/crownGestures/gesture2",
     "pages/crownGestures/gesture3",
     "pages/crownGestures/gesture4",
-    "pages/crown"
+    "pages/crown",
+    "pages/smart",
+    "pages/smartGestures/gesture1",
+    "pages/smartGestures/gesture2"
   ]
 }

@@ -23,10 +23,26 @@ export default class Constant {
     {
       title: "Rotate",
       description: "Rotate the crown counterclockwise or clockwise",
-      task: "Rotate the crown to charge the bulb",
+      task: "Rotate the crown quickly to charge the bulb",
       image: 'app.media.touch'
     },
   ]
+
+  static smartAbilityList: Gesture[] = [
+    {
+      title: "Double-tap",
+      description: "Tap your thumb and index fingertips together twice to confirm an option.",
+      task: "Double tap to light the bulb",
+      image: 'app.media.touch'
+    },
+    {
+      title: "Double-slide",
+      description: "Slide your thumb twice along your index finger to switch options.",
+      task: "Slide and tap to light the bulb",
+      image: 'app.media.touch'
+    },
+  ]
+
 
   static pressAbility: string[] = [
     '1. Screen off           → press to wake up',

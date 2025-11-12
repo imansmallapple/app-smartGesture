@@ -61,10 +61,26 @@ struct Rotate {
         .width('80%')
         .justifyContent(FlexAlign.Center)
 
-        buttonComponent({
-          isNext: true,
-          isCrownGesture: true,
-          currentTouchId: 4
+        Column() {
+          Text('END')
+            .fontSize('15px')
+            .fontWeight(FontWeight.Bold)
+            .fontColor(Color.White)
+            .margin({ left: 3 })
+        }
+        .width('10%')
+        .height('100%')
+        .justifyContent(FlexAlign.Center)
+        .alignItems(HorizontalAlign.Start)
+        .backgroundColor(Color.Orange)
+        .borderRadius({
+          topLeft: 15,
+          bottomLeft: 15
+        })
+        .onClick(() => {
+          this.getUIContext().getRouter().replaceUrl({
+            url: 'pages/Index'
+          })
         })
       }
       .width('100%')
