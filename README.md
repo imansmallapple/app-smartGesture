@@ -8,10 +8,8 @@
 
 ## Overview
 
-This app demonstrates and tests various gesture and crown **smartGesture** is a lightweight wearable demo app for *
-*Huawei Watch 5**, designed to demonstrate and test **gesture** and **crown (button)** interactions.  
-It helps developers verify the system’s response to different operations such as taps, swipes, button clicks, and long
-presses.
+This app demonstrates and tests various gesture and crown **smartGesture** is a lightweight wearable demo app for **Huawei Watch 5**, designed to demonstrate and test **gesture** and **crown (button)** interactions.  
+It helps developers verify the system’s response to different operations such as taps, swipes, button clicks, and long presses.
 
 The app covers both **touch-based gestures** and **hardware button actions**, offering visual feedback on the watch
 screen for each interaction.
@@ -47,47 +45,32 @@ UI effects is as following:
     - **Rotate**
         1. Rotate the crown counterclockwise or clockwise
 
-- 📱 **Screen States**
-    - Return to watch index page when in sub-pages
-    - Disable side-swipe back for custom navigation
-
-- 🎨 **Visual Feedback**
-    - Each interaction provides basic usage information and triggers simple effect with bulb.
-    - Easy to verify interaction mapping and transitions.
-
-
-- **Smart Gestures**  
-  Smart gestures are a unique perception interaction method of smart wearable devices in addition to screen interaction,
-  crown interaction and button interaction. In scenarios that require one-handed processing, users can use tapping
-  fingers and sliding knuckles to control and switch choices.
 
 > **illustrate**  
 > Use the Smart Gestures feature to turn on the Smart Gesture Recognition switch on your device.
 
-- **Interaction Scenarios**
-    - Remind the scene, control that needs to be dealt with in time, such as phone calls, alarm clocks, etc.
-    - Convenient control of high-frequency usage scenarios, such as the "next song" of the broadcast control center.
-    - Scenes where it is inconvenient to click with both hands, such as remote control photography.
+- 📱**Smart Gestures**  
+  Smart gestures are a unique perception interaction method of smart wearable devices in addition to screen interaction, crown interaction and button interaction. In scenarios that require one-handed processing, users can use tapping fingers and sliding knuckles to control and switch choices.
 
-- **Pinch Confirmation**  
+    - **Interaction Scenarios**
+        - Remind the scene, control that needs to be dealt with in time, such as phone calls, alarm clocks, etc.
+        - Convenient control of high-frequency usage scenarios, such as the "next song" of the broadcast control center.
+        - Scenes where it is inconvenient to click with both hands, such as remote control photography.
 
-![gif2.gif](images%2Fgif2.gif)  
+    - **Pinch Confirmation**  
+    ![gif2.gif](images%2Fgif2.gif)  
 
-- Quickly touch your thumb and index finger twice to confirm the current focus. It is often used in scenarios such as
-  confirmation key, music pause/playback, etc  
+    - Quickly touch your thumb and index finger twice to confirm the current focus. It is often used in scenarios such as
+    confirmation key, music pause/playback, etc.  
 
-    - Implementation principle: After the system recognizes the gesture, the component's `onKeyEvent` event will be
-      triggered, with `KeyCode` as `KEYCODE_ENTER` and type as `KeyType.Down`, and the application can perform functions
-      after this condition is triggered, such as pausing music.
+        - Implementation principle: After the system recognizes the gesture, the component's `onKeyEvent` event will be triggered, with `KeyCode` as `KEYCODE_ENTER` and type as `KeyType.Down`, and the application can perform functions after this condition is triggered, such as pausing music.
 
-- **Swipe to focus**  
-![gif1.gif](images%2Fgif1.gif)  
-  
-- Switch the current focus to confirm the next action, by quickly sliding the thumb along the second joint of the index finger to the fingertip to switch the focus, and then confirm the operation, which can be used to switch to the cancel button, or switch to the next button to play the next song, for canceling messages, switching songs and other operation scenarios
+    - **Swipe to focus**  
+    ![gif1.gif](images%2Fgif1.gif)  
+    
+    - Switch the current focus to confirm the next action, by quickly sliding the thumb along the second joint of the index finger to the fingertip to switch the focus, and then confirm the operation, which can be used to switch to the cancel button, or switch to the next button to play the next song, for canceling messages, switching songs and other operation scenarios.
 
-    - Implementation principle: After the system recognizes the gesture, the `onBlur` and `onFocus` events of the
-      out-of-focus component and the focus component will be triggered respectively, and the application can perform
-      functions after this condition is triggered, such as changing the style of the focus component to highlighting.
+        - Implementation principle: After the system recognizes the gesture, the `onBlur` and `onFocus` events of the out-of-focus component and the focus component will be triggered respectively, and the application can perform functions after this condition is triggered, such as changing the style of the focus component to highlighting.
 
 ---
 
